@@ -1,0 +1,32 @@
+<div class="section">
+  <div class="container">
+    <div class="content has-text-centered">
+      <h1 class="title">News Scraper</h1>
+    </div>
+    <div class="columns">
+      <div class="column is-two-thirds" id="articles">
+        {{#each articles}}
+        <h3 class="subtitle">
+          <a href="{{ link }}">{{ title }}</a>
+        </h3>
+        <p>{{ summary }}</p>
+        <br />
+        <button class="button is-small" id="noteBtn" data-id="{{ _id }}">
+          Notes
+        </button>
+        <hr />
+        {{/each}}
+      </div>
+      <div class="column is-one-third has-text-centered" id="notes">
+        <div class="content" id="noteBox"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"
+></script>
+<script src="app.js"></script>
